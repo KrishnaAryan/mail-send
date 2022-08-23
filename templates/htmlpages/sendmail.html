@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+<body style="background-color:rgb(177, 183, 184);" >
+
+    <form align="center">
+        <h1 style="color: red;">Welcome to Mail service</h1>
+
+    </form>
+    
+    <form method="post" align="center">
+        {% csrf_token %}
+        <p>Enter Email to Send</p>
+        <input type="text"  name="email" size="50" placeholder="Enter mail id" style="background-color: aqua;">
+
+        <p>Enter email to Subject</p>
+        <input type="text" name="subject" size="50" placeholder="Enter subject" style="background-color: aqua;">
+
+        <p>Enter Email Content</p>
+        <textarea name="content" placeholder="Write content.." style="background-color: aqua;"></textarea> 
+
+        <p>Enter HTML Content</p>
+        <textarea name="html" placeholder="Write html content.." style="background-color: aqua;"></textarea> <br>
+
+        <button type="submit" style="background-color: green;" >Send Mail</button>
+
+    </form>
+
+    
+</body>
+</html>
